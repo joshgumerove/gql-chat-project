@@ -10,7 +10,6 @@ export function useAddMessage() {
     } = await mutate({
       variables: { text },
       update: (cache, { data }) => {
-        console.log("[useAddMessage] data: ", data);
         const newMessage = data.message;
         cache.updateQuery(
           {
